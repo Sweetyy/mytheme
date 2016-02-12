@@ -1,0 +1,12 @@
+/* Theme Name */
+
+.post_content img {
+    max-width: 200px;
+    width: 100%;
+    opacity: 0.8;
+    transition: all 0.8s;
+}
+
+.post_content img:hover {
+    opacity: 1;
+}
