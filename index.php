@@ -9,7 +9,7 @@
         <?php the_content(); ?>
     </section>
     <?php endwhile; endif; ?>   
-    <section id="#Contact">
+    <section id="Contact">
         <h2> Contact</h2>
         <div class="form">
             <form class="contact" action="mailing.php" method="post">  
@@ -26,7 +26,7 @@
     
 <script src="wp-content/themes/mytheme/js/jquery.min.js"></script>
 <script type="text/javascript" src="wp-content/themes/mytheme/js/lightbox.min.js"></script>
-<script>
+<script>/*
     $(".menu ul li a[href^='#']").on('click', function(e) {
     console.log('test');
     e.preventDefault();
@@ -38,7 +38,7 @@
 
        window.location.hash = this.hash;
      });
-    });
+    });*/
 </script>
 
 <script>
@@ -55,13 +55,13 @@
                 $('.menu a').css('font-size', '1.4em');
             }
         });
-        
+        /*
         // Animate the scroll to top
         $('.go-top').click(function(event) {
             event.preventDefault();
             
             $('html, body').animate({scrollTop: 0}, 600);
-        })
+        })*/
     });
 </script>
 <script>
@@ -97,7 +97,7 @@
     </script>
    
    <!-- ScrollToTop -->
-   <script>
+   <script>/*
 	   $(".menu2 a[href^='#']").on('click', function(e) {
 
        e.preventDefault();
@@ -109,7 +109,7 @@
    
            window.location.hash = this.hash;
          });
-		});
+		});*/
 	</script>
 	
 	<!-- MenuFade -->

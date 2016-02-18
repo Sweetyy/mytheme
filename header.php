@@ -42,7 +42,7 @@
             <?php wp_nav_menu(); ?>
         </div>
         
-        <a href="#" class="go-top desktop"><i class="fa fa-chevron-circle-up"></i></a>
+        <a href="#" class="go-top desktop" rel="m_PageScroll2id"><i class="fa fa-chevron-circle-up"></i></a>
         
         <div class="content">
             <section id="Accueil">
