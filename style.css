@@ -454,7 +454,7 @@ a.zoom>span {
 
 .galery li>p>img {
 	position: relative;
-    display: block;
+    display: none;
     -webkit-transition: top .3s linear, left .3s linear, -webkit-transform .25s linear;
     transition: top .3s linear, left .3s linear, transform .25s linear;
     -webkit-backface-visibility: hidden;
@@ -472,6 +472,47 @@ a.zoom>span {
     line-height: 0;
     margin: 0;
     padding: 0;
+}
+
+.item-galery>p>img:first-child {
+    display: block;
+}
+
+.single-post .galery p img {
+    position: relative;
+    display: none;
+    vertical-align: top;
+    width: 31.333333333333333%;
+    opacity: 0;
+    margin: 1%;
+    float: left;
+    overflow: hidden;
+    -webkit-transition: opacity .35s ease;
+    transition: opacity .35s ease;
+	display: inline-block;
+    opacity: 1;
+}
+
+.single-post .galery p img:hover {
+	opacity: 0.5;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.single-post .galery p img {
+	position: relative;
+    display: block;
+    -webkit-transition: top .3s linear, left .3s linear, -webkit-transform .25s linear;
+    transition: top .3s linear, left .3s linear, transform .25s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+}
+
+.single-post .galery img:hover {
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
 }
 
 /*------------------

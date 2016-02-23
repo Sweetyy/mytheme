@@ -11,7 +11,7 @@
     <?php endwhile; endif; ?>   
     <section id="Contact">
         <h2> Contact</h2>
-        <div class="form">
+        <div class="form" id="section4">
             <form class="contact" action="mailing.php" method="post">  
                 <p class="description">Nom(*)</p><input type="text" name="first_name" required >
                 <p class="description">Prénom</p><input type="text" name="last_name">
