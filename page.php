@@ -5,17 +5,25 @@
 <?php query_posts('post_type=page'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <section id="<?php the_title(); ?>" class="content-center align-justify">
-        <h2><?php the_title(); ?></h2>
+    <?php
+        if( 'Galeries' === $post->post_title ) {
+            echo '<section id="'.get_the_title().'" class="content-center align-center">';
+        }
+        else {
+            echo '<section id="'. get_the_title().'" class="content-center align-justify">';
+        }
+    ?>
+    
+    <h2><?php the_title(); ?></h2>
 
-        <?php the_content(); ?>
+    <?php the_content(); ?>
         
     </section>
     
     <?php if( 'Galeries' === $post->post_title ) {
         echo '<ul class="galery">';
         echo do_shortcode("[ic_add_posts category='galeries']");
-        echo '<ul class="galery">';
+        echo '</ul>';
     } ?>
     
 <?php endwhile; endif; ?> 

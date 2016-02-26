@@ -305,19 +305,19 @@ legend {
 	padding: 6px;
 }
 
-.align-center {
+.align-center p{
     text-align: center;
 }
 
-.align-left {
+.align-left p{
     text-align: left;
 }
 
-.align-right {
+.align-right p{
     text-align: right;
 }
 
-.align-justify {
+.align-justify p{
     text-align: justify;
 }
 
