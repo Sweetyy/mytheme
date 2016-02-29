@@ -6,8 +6,8 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php
-        if( 'Galeries' === $post->post_title ) {
-            echo '<section id="'.get_the_title().'" class="content-center align-center">';
+        if( 'Galeries' === $post->post_title || 'News' === $post->post_title) {
+            echo '<section id="'.get_the_title().'" class="">';
         }
         else {
             echo '<section id="'. get_the_title().'" class="content-center align-justify">';
@@ -17,17 +17,22 @@
     <h2><?php the_title(); ?></h2>
 
     <?php the_content(); ?>
-        
-    </section>
     
     <?php if( 'Galeries' === $post->post_title ) {
         echo '<ul class="galery">';
-        echo do_shortcode("[ic_add_posts category='galeries']");
+        echo do_shortcode("[ic_add_posts category='galeries'] template='template_gallery.php']");
         echo '</ul>';
     } ?>
     
+    <?php if( 'News' === $post->post_title ) {
+        echo '<ul class="news">';
+        echo do_shortcode("[ic_add_posts category='news' template='template_news.php']");
+        echo '</ul>';
+    } ?>
+    
+    </section>
+    
 <?php endwhile; endif; ?> 
-
 
 <section id="Contact">
     <h2> Contact</h2>
@@ -46,7 +51,6 @@
  </body>
     
 <script src="wp-content/themes/mytheme/js/jquery.min.js"></script>
-<script type="text/javascript" src="wp-content/themes/mytheme/js/lightbox.min.js"></script>
 <script>/*
     $(".menu ul li a[href^='#']").on('click', function(e) {
     console.log('test');

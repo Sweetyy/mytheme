@@ -452,7 +452,7 @@ a.zoom>span {
 	opacity: 0;
 }
 
-.galery li>p>img {
+.galery li img {
 	position: relative;
     display: none;
     -webkit-transition: top .3s linear, left .3s linear, -webkit-transform .25s linear;
@@ -463,9 +463,13 @@ a.zoom>span {
     transform: scale(1.025);
 }
 
-.galery li:hover>p>img {
+.galery li:hover img {
 	-webkit-transform: scale(1.4);
 	transform: scale(1.4);
+}
+
+.item-galery {
+    cursor: pointer;
 }
 
 .item-galery>p:first-child {
@@ -483,7 +487,6 @@ a.zoom>span {
     display: none;
     vertical-align: top;
     width: 31.333333333333333%;
-    opacity: 0;
     margin: 1%;
     float: left;
     overflow: hidden;
@@ -494,25 +497,9 @@ a.zoom>span {
 }
 
 .single-post .galery p img:hover {
-	opacity: 0.5;
+	opacity: 1;
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
-}
-
-.single-post .galery p img {
-	position: relative;
-    display: block;
-    -webkit-transition: top .3s linear, left .3s linear, -webkit-transform .25s linear;
-    transition: top .3s linear, left .3s linear, transform .25s linear;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: scale(1.025);
-    transform: scale(1.025);
-}
-
-.single-post .galery img:hover {
-	-webkit-transform: scale(1.4);
-	transform: scale(1.4);
 }
 
 /*------------------
@@ -673,6 +660,9 @@ a.zoom>span {
 
 @media (max-width: 990px) {
 .galery li {
+    width: 48%;
+}
+.single-post .galery p img {
     width: 48%;
 }
 }
@@ -874,6 +864,13 @@ a.zoom>span {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 20px;
+}
+.single-post .galery {
+    padding: 0;
+}
+.single-post .galery p img {
+    width: 100%;
+    margin: 0;
 }
 .go-top {
 	position: fixed;
