@@ -1,8 +1,8 @@
 <?php 
     wp_reset_query();
-    get_header(); ?>
+    get_header();
 
-<?php query_posts('post_type=page'); ?>
+    query_posts('post_type=page'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php
@@ -20,14 +20,14 @@
     
     <?php if( 'Galeries' === $post->post_title ) {
         echo '<ul class="galery">';
-        echo do_shortcode("[ic_add_posts category='galeries'] template='template_gallery.php']");
+        echo do_shortcode("[ic_add_posts category='galeries' template='template_gallery.php']");
         echo '</ul>';
     } ?>
     
     <?php if( 'News' === $post->post_title ) {
-        echo '<ul class="news">';
+        echo '<table class="news">';
         echo do_shortcode("[ic_add_posts category='news' template='template_news.php']");
-        echo '</ul>';
+        echo '</table>';
     } ?>
     
     </section>
@@ -52,7 +52,7 @@
     
 <script src="wp-content/themes/mytheme/js/jquery.min.js"></script>
 <script>/*
-    $(".menu ul li a[href^='#']").on('click', function(e) {
+    $(".navmenu ul li a[href^='#']").on('click', function(e) {
     console.log('test');
     e.preventDefault();
 
@@ -72,12 +72,12 @@
         $(window).scroll(function() {
             if ($(this).scrollTop() > 300) {
                 $('.go-top').fadeIn(300);
-                $('.menu').css('background', 'rgba(0, 0, 0, 0.8)');
-                $('.menu a').css('font-size', '1.1em');
+                $('.navmenu').css('background', 'rgba(0, 0, 0, 0.8)');
+                $('.navmenu a').css('font-size', '1.1em');
             } else {
                 $('.go-top').fadeOut(300);
-                $('.menu').css('background', 'transparent');
-                $('.menu a').css('font-size', '1.4em');
+                $('.navmenu').css('background', 'transparent');
+                $('.navmenu a').css('font-size', '1.4em');
             }
         });
         /*
@@ -92,7 +92,7 @@
 <script>
       (function() {
         
-        var togglemenu = document.querySelectorAll(".menu2>ul>li>a");
+        var togglemenu = document.querySelectorAll(".navmenu-resp>ul>li>a");
         var toggles = document.querySelectorAll(".icon-animation");
 
         for (var i = toggles.length - 1; i >= 0; i--) {
@@ -107,7 +107,7 @@
           });
         }
         
-        $( ".menu2>div>ul>li>a" ).click(function() {
+        $( ".navmenu-resp>div>ul>li>a" ).click(function() {
            if ( $("#start").hasClass("activate")) {
                 $("#start").removeClass( "activate" );
             }
@@ -123,7 +123,7 @@
    
    <!-- ScrollToTop -->
    <script>/*
-	   $(".menu2 a[href^='#']").on('click', function(e) {
+	   $(".navmenu-resp a[href^='#']").on('click', function(e) {
 
        e.preventDefault();
 
@@ -143,7 +143,7 @@
 			
 			$('#start').click(function() {
 				
-				$('.menu2').fadeToggle(500);
+				$('.navmenu-resp').fadeToggle(500);
 				
 				if(document.getElementById('nav').checked)
 				{
@@ -157,9 +157,9 @@
 				
 			});
 			
-			$('.menu2 ul li a').click(function fademenu() {
+			$('.navmenu-resp ul li a').click(function fademenu() {
 				
-				$('.menu2').fadeToggle(700);
+				$('.navmenu-resp').fadeToggle(700);
 				$('#nav').prop('checked', false);
 				
 			});

@@ -134,6 +134,11 @@ h2 {
     color: white;
 }
 
+h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 img {
 	border: 0;
     height: auto;
@@ -214,7 +219,7 @@ section {
 	color: rgba(255, 255, 255, 1);
 }
 
-.menu {
+.navmenu {
     margin: 0 auto;
     position: fixed;
     top: 0;
@@ -231,22 +236,22 @@ section {
     /* background: rgba(0, 0, 0, 0.8); */
 }
 
-.menu ul {
+.navmenu ul {
     display: block;
     text-align: center;
 }
 
-.menu li {
+.navmenu li {
     display: inline-block;
     margin: 10px;
     margin-right: 5vw;
 }
 
-.menu li:last-child {
+.navmenu li:last-child {
     margin-right: 0;
 }
 
-.menu a{
+.navmenu a{
     text-decoration: none;
     position: relative;
     color: white;
@@ -258,11 +263,11 @@ section {
     transition: all .35s ease;
 }
 
-.menu a:hover {
+.navmenu a:hover {
     color: #25F3A0;
 }
 
-.menu a:after {
+.navmenu a:after {
 	content: '';
     position: absolute;
     left: 0;
@@ -278,7 +283,7 @@ section {
 	transform: scale(0,1);
 }
 
-.menu a:hover:after {
+.navmenu a:hover:after {
   opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -385,7 +390,7 @@ h1 {
     z-index: 100;
     font-size: 46px;
     color: rgba(255, 255, 255, 0.8);
-    bottom: 40px;
+    top: 33%;
 	opacity: 0;
     left: 0;
 	-webkit-transition: opacity .35s ease;
@@ -500,6 +505,35 @@ a.zoom>span {
 	opacity: 1;
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
+}
+
+.news {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.news td * {
+    text-align: center;
+}
+
+.news-panel {
+    max-width: 360px;
+    margin: 0 auto;
+    background: white;
+    color: #1B1B1B;
+}
+
+.news-panel button, .news-panel button:active, .news-panel button:focus {
+    margin-top: 20px;
+}
+
+.news-panel button:hover {
+    margin-top: 34px;
+}
+
+.news-text {
+    padding: 20px;
+    width: 100%;
 }
 
 /*------------------
@@ -680,7 +714,7 @@ a.zoom>span {
     display: none !important;
 }
 
-.menu2 {
+.navmenu-resp {
 	display: none;
 	position: fixed;
 	z-index: 1000;
@@ -692,7 +726,7 @@ a.zoom>span {
 	transition: none;
 }
 
-.menu2 {
+.navmenu-resp {
 	display: none;
 	position: fixed;
 	z-index: 1000;
@@ -704,14 +738,14 @@ a.zoom>span {
 	transition: none;
 }
 
-.menu2 ul{
+.navmenu-resp ul{
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 100%;
 }
 
-.menu2 ul li{
+.navmenu-resp ul li{
 	display: block;
 	float: left;
 	clear: none;
@@ -722,7 +756,7 @@ a.zoom>span {
 	height: 100%;
 }
 
-.menu2 ul li a{
+.navmenu-resp ul li a{
 	color: white;
 	font-size: 30px;
 	z-index: 2000;
@@ -734,17 +768,17 @@ a.zoom>span {
 	transition: all 0.4s;
 }
 
-.menu2 ul li a i{
+.navmenu-resp ul li a i{
 	opacity: 0;
 	margin-right: 0;
 }
 
-.menu2 ul li a:hover i{
+.navmenu-resp ul li a:hover i{
 	opacity: 1;
 	margin-right: 12px;
 }
 
-.menu2 ul li a:hover{
+.navmenu-resp ul li a:hover{
 	background: rgba(14, 174, 108, 0.8);
 }
 
@@ -871,6 +905,7 @@ a.zoom>span {
 .single-post .galery p img {
     width: 100%;
     margin: 0;
+    margin-bottom: 6px;
 }
 .go-top {
 	position: fixed;

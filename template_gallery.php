@@ -2,7 +2,7 @@
     <?php the_content(); ?>
     <a class="zoom">
         <span>Voir la galerie</span><br />
-        <i class="fa fa-plus"></i>
+        <i class="fa fa-search-plus"></i>
     </a>
     <p class="zoom-details">
         <?php the_title(); ?>

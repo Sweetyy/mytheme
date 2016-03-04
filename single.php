@@ -22,22 +22,38 @@
     <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>   
 </head> 
 <body>
-<div class="menu">
+<div class="navmenu">
     <ul>
-        <li style="float: left;"><a href="http://localhost/wordpress/#Galeries"><i class="fa fa-long-arrow-left"></i> Retour</a></li>
+        <?php
+            if ( in_category( 'news' )) {
+                echo '<li style="float: left;"><a href="http://localhost/wordpress/#News"><i class="fa fa-long-arrow-left"></i> Retour</a></li>';
+            }
+            else if ( in_category( 'galeries' )){
+                echo '<li style="float: left;"><a href="http://localhost/wordpress/#Galeries"><i class="fa fa-long-arrow-left"></i> Retour</a></li>';
+            }
+        ?>
     </ul>
 </div>
         
 <a href="#" class="go-top"><i class="fa fa-chevron-circle-up"></i></a>
 <div class="content single-post">
     <?php if (have_posts()) : ?> 
-    <h2>
-        <?php the_title(); ?>
-    </h2>
-        <?php while (have_posts()) : the_post(); ?> 
-            <ul class="galery">
-                <?php the_content(); ?>
-            </ul>
+        <?php while (have_posts()) : the_post(); ?>
+        <h2>
+            <?php the_title(); ?>
+        </h2>
+        <?php
+            if ( in_category( 'news' )) {
+                echo '<div class="news-content content-center align-justify">';
+                echo the_content();
+                echo '</div>';
+            }
+            else if ( in_category( 'galeries' )){
+                echo '<ul class="galery">';
+                echo the_content();
+                echo '</ul>';
+            }
+        ?>
         <?php endwhile; ?> 
     <?php endif; ?> 
 </div>
@@ -46,7 +62,7 @@
 <script src="../wp-content/themes/mytheme/js/jquery.min.js"></script>
 
 <script>
-    $(".menu ul li a[href^='#']").on('click', function(e) {
+    $(".navmenu ul li a[href^='#']").on('click', function(e) {
 
     e.preventDefault();
 
@@ -66,12 +82,12 @@
         $(window).scroll(function() {
             if ($(this).scrollTop() > 300) {
                 $('.go-top').fadeIn(300);
-                $('.menu').css('background', 'rgba(0, 0, 0, 0.8)');
-                $('.menu a').css('font-size', '1.1em');
+                $('.navmenu').css('background', 'rgba(0, 0, 0, 0.8)');
+                $('.navmenu a').css('font-size', '1.1em');
             } else {
                 $('.go-top').fadeOut(300);
-                $('.menu').css('background', 'transparent');
-                $('.menu a').css('font-size', '1.4em');
+                $('.navmenu').css('background', 'transparent');
+                $('.navmenu a').css('font-size', '1.4em');
             }
         });
         

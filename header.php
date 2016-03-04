@@ -27,12 +27,12 @@
             <button id="start" class="icon-animation icon-animation-transition">
                  <span></span>
             </button>
-            <div class="menu2">
+            <div class="navmenu-resp">
                 <?php wp_nav_menu(); ?>
             </div>
         </span>
         
-        <div class="menu desktop">
+        <div class="navmenu desktop">
             <?php wp_nav_menu(); ?>
         </div>
         
