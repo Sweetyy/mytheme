@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html> 
+    <html style="margin-top: 0 !important"> 
     <head>
         <title>
             <?php bloginfo('name') ?><?php if ( is_404() ) : ?> &raquo; 

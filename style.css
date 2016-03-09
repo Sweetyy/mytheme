@@ -442,7 +442,7 @@ h1 {
 }
 
 .news-panel {
-    /* max-width: 360px; */
+    max-width: 255px;
     border: solid 1px lightgrey;
     background: whitesmoke;
     margin: 0 auto;
@@ -786,6 +786,14 @@ a.zoom>span {
 		max-width: 270px;
 		padding: 15px;
 		min-width: 170px;
+	}
+	
+	.news-panel .btn-style {
+		margin: 0 auto;
+	}
+	
+	.news-panel {
+		max-width: 100%;
 	}
     
     .news, .news tbody, .news tr, .news td {
