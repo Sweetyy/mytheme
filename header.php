@@ -36,14 +36,24 @@
             <?php wp_nav_menu(); ?>
         </div>
         
-        <a href="#" class="go-top desktop" rel="m_PageScroll2id"><i class="fa fa-chevron-circle-up"></i></a>
+        <!--<a href="#" class="go-top desktop" rel="m_PageScroll2id"><i class="fa fa-chevron-circle-up"></i></a>-->
         
         <div class="content">
-            <section id="Accueil">
-                <!-- <div class="logo"><img src="img/logo.png"></div> -->
-                <h1><?php bloginfo('name'); ?></a></h1>
-                <span id="sentences"><?php bloginfo('description'); ?></span>
-            </section>
+            <span>
+                <div class="bg-animate"></div>
+                <section id="Accueil">
+                    <!-- <div class="logo"><img src="img/logo.png"></div> -->
+                    <h1><?php bloginfo('name'); ?></a></h1>
+                    <span id="sentences"><?php bloginfo('description'); ?></span>
+                    <div class="social-link">
+                        <ul>
+                            <li><a href="#"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/facebook.png"></a></li>
+                            <li><a href="#"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/instagram.png"></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </span>
+            
             
             
 

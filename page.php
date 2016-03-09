@@ -6,8 +6,11 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php
-        if( 'Galeries' === $post->post_title || 'News' === $post->post_title) {
+        if( 'Galeries' === $post->post_title) {
             echo '<section id="'.get_the_title().'" class="">';
+        }
+        else if( 'News' === $post->post_title) {
+            echo '<section id="'.get_the_title().'" class="content-center">';
         }
         else {
             echo '<section id="'. get_the_title().'" class="content-center align-justify">';
