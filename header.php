@@ -21,7 +21,8 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>   
         <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>   
     </head> 
-    <body>   
+    <body>
+        <div class="animated yt-loader"></div>
         <div id="Gotop" class="main">
         <span class="responsive">
             <button id="start" class="icon-animation icon-animation-transition">
