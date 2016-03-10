@@ -1,4 +1,4 @@
-<td>
+<div class="panel-td">
     <div class="news-panel">
         <div class="news-text">   
             <h3>
@@ -10,4 +10,4 @@
         </div>
         <button class="btn-style" onclick="location.href='<?php the_permalink(); ?>'">Read more</button>
     </div>
-</td>
+</div>

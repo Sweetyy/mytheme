@@ -46,6 +46,9 @@
             if ( in_category( 'news' )) {
                 echo '<div class="news-content content-center align-justify">';
                 echo the_content();
+                echo '<div class="comments-template"> ';
+                echo comments_template();
+                echo '</div>';
                 echo '</div>';
             }
             else if ( in_category( 'galeries' )){

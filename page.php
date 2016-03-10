@@ -22,19 +22,19 @@
     <?php the_content(); ?>
     
     <?php if( 'Galeries' === $post->post_title ) {
-        echo '<ul class="galery">';
+        echo '<div class="galery panel-table">';
         echo do_shortcode("[ic_add_posts category='galeries' template='template_gallery.php']");
-        echo '</ul>';
+        echo '</div>';
     } ?>
     
     <?php if( 'News' === $post->post_title ) {
-        echo '<table class="news">';
+        echo '<div class="news panel-table">';
         echo do_shortcode("[ic_add_posts category='news' template='template_news.php']");
-        echo '</table>';
+        echo '</div>';
     } ?>
     
     </section>
-    
+
 <?php endwhile; endif; ?> 
 
 <section id="Contact">

@@ -1,4 +1,4 @@
-<li class="item-galery" onclick="location.href='<?php the_permalink(); ?>'">
+<div class="item-galery panel-td" onclick="location.href='<?php the_permalink(); ?>'">
     <?php the_content(); ?>
     <a class="zoom">
         <span>Voir la galerie</span><br />
@@ -7,4 +7,4 @@
     <p class="zoom-details">
         <?php the_title(); ?>
     </p>
-</li>
+</div>

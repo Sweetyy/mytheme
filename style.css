@@ -326,6 +326,25 @@ legend {
     text-align: justify;
 }
 
+.panel-table {
+    width: 100%;
+    height: auto;
+    /*margin: 15% 0;*/
+    /*margin-top: 0;*/
+    margin: 0;
+    text-align: center;
+}
+
+.panel-td {
+    margin: 0 auto;
+    width:30%;
+    padding: 6px;
+    text-align: center;
+    clear: left;
+    display: inline-block;
+    margin:0 auto; 
+}
+
 /*------------------
 	FIRST PAGE
 ------------------*/
@@ -476,7 +495,7 @@ h1 {
     font-size: 0.9em;
 }
 
-.news-panel .btn-style {
+.news-panel .btn-style, .news-panel .btn-style:focus {
     margin: 0;
 }
 
@@ -530,14 +549,15 @@ a.zoom>span {
     backface-visibility: hidden;
 }
 
-.galery li {
+.galery .panel-td {
 	position: relative;
     display: none;
     vertical-align: top;
     width: 31.333333333333333%;
     opacity: 0;
+    padding: 0;
     margin: 1%;
-    float: left;
+    /*float: left;*/
     overflow: hidden;
     -webkit-transition: opacity .35s ease;
     transition: opacity .35s ease;
@@ -545,21 +565,21 @@ a.zoom>span {
     opacity: 1;
 }
 
-.galery li:hover img {
+.galery .panel-td:hover img {
 	opacity: 0.5;
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
 }
 
-.galery li:hover>.zoom {
+.galery .panel-td:hover>.zoom {
     opacity: 1;
 }
 
-.galery li:hover>.zoom-details {
+.galery .panel-td:hover>.zoom-details {
 	opacity: 0;
 }
 
-.galery li img {
+.galery .panel-td img {
 	position: relative;
     display: none;
     -webkit-transition: top .3s linear, left .3s linear, -webkit-transform .25s linear;
@@ -570,7 +590,7 @@ a.zoom>span {
     transform: scale(1.025);
 }
 
-.galery li:hover img {
+.galery .panel-td:hover img {
 	-webkit-transform: scale(1.4);
 	transform: scale(1.4);
 }
@@ -769,7 +789,7 @@ a.zoom>span {
 }
 
 @media (max-width: 990px) {
-.galery li {
+.galery .panel-td {
     width: 48%;
 }
 .single-post .galery p img {
@@ -787,23 +807,27 @@ a.zoom>span {
 		padding: 15px;
 		min-width: 170px;
 	}
+    
+    .panel-table {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .panel-td {
+        width:100%;
+        clear: left;
+        display: block;
+        margin:0 auto; 
+    }
+    
+    .news-panel {
+        max-width: 100%;
+    }
 	
 	.news-panel .btn-style {
 		margin: 0 auto;
 	}
-	
-	.news-panel {
-		max-width: 100%;
-	}
-    
-    .news, .news tbody, .news tr, .news td {
-        display: block;
-        width: 100%;
-    }
-    
-    .news td {
-        margin-bottom: 10px;
-    }
         
     h1 {
         padding-top: 35vh;
@@ -1000,7 +1024,7 @@ a.zoom>span {
         transition-delay: 0s, 0.3s;
     }
 
-    .galery li {
+    .galery .panel-td {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
