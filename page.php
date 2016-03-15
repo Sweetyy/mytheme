@@ -6,7 +6,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php
-        if( 'Galeries' === $post->post_title) {
+        if( 'Galleries' === $post->post_title) {
             echo '<section id="'.get_the_title().'" class="">';
         }
         else if( 'News' === $post->post_title) {
@@ -21,7 +21,7 @@
 
     <?php the_content(); ?>
     
-    <?php if( 'Galeries' === $post->post_title ) {
+    <?php if( 'Galleries' === $post->post_title ) {
         echo '<div class="galery panel-table">';
         echo do_shortcode("[ic_add_posts category='galeries' template='template_gallery.php']");
         echo '</div>';
@@ -41,12 +41,12 @@
     <h2> Contact</h2>
     <div class="form" id="section4">
         <form class="contact" action="mailing.php" method="post">  
-            <p class="description">Nom(*)</p><input type="text" name="first_name" required >
-            <p class="description">Prénom</p><input type="text" name="last_name">
-            <p class="description">Email(*)</p><input type="email" name="email" required >
+            <p class="description">Lastname(*)</p><input type="text" name="first_name" required >
+            <p class="description">Firstname</p><input type="text" name="last_name">
+            <p class="description">Mail(*)</p><input type="email" name="email" required >
             <p class="description">Message(*)</p><textarea rows="8" name="message" cols="30" required ></textarea>
-            <p class="description info" style="margin: 0">Les champs avec (*) sont obligatoires.</p>
-            <button class="btn-style" type="submit" name="submit" value="Submit">Envoyer</button>
+            <p class="description info" style="margin: 0">Fields with (*) are mandatories.</p>
+            <button class="btn-style" type="submit" name="submit" value="Submit">Send</button>
         </form>
     </div>
 </section>
@@ -56,19 +56,14 @@
  </body>
     
 <script src="wp-content/themes/mytheme/js/jquery.min.js"></script>
-<script>/*
+<script>
     $(".navmenu ul li a[href^='#']").on('click', function(e) {
-    console.log('test');
-    e.preventDefault();
-
-    // animate
-    $('html, body').animate({
-       scrollTop: $(this.hash).offset().top
-     }, 600, function(){
-
-       window.location.hash = this.hash;
-     });
-    });*/
+        e.preventDefault();    
+        $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 600);
+        /*window.location.hash = this.text;*/
+    });
 </script>
 
 <script>
@@ -85,9 +80,9 @@
                 $('.navmenu a').css('font-size', '1.4em');
             }
         });
-        /*
+        
         // Animate the scroll to top
-        $('.go-top').click(function(event) {
+        /*$('.go-top').click(function(event) {
             event.preventDefault();
             
             $('html, body').animate({scrollTop: 0}, 600);

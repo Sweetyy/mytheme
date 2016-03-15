@@ -48,8 +48,8 @@
                     <span id="sentences"><?php bloginfo('description'); ?></span>
                     <div class="social-link">
                         <ul>
-                            <li><a href="#"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/facebook.png"></a></li>
-                            <li><a href="#"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/instagram.png"></a></li>
+                            <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/facebook.png"></a></li>
+                            <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/instagram.png"></a></li>
                         </ul>
                     </div>
                 </section>

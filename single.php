@@ -29,7 +29,7 @@
                 echo '<li style="float: left;"><a href="http://localhost/wordpress/#News"><i class="fa fa-long-arrow-left"></i> Retour</a></li>';
             }
             else if ( in_category( 'galeries' )){
-                echo '<li style="float: left;"><a href="http://localhost/wordpress/#Galeries"><i class="fa fa-long-arrow-left"></i> Retour</a></li>';
+                echo '<li style="float: left;"><a href="http://localhost/wordpress/#Galleries"><i class="fa fa-long-arrow-left"></i> Retour</a></li>';
             }
         ?>
     </ul>
@@ -61,45 +61,4 @@
     <?php endif; ?> 
 </div>
 </body>
-
-<script src="../wp-content/themes/mytheme/js/jquery.min.js"></script>
-
-<script>
-    $(".navmenu ul li a[href^='#']").on('click', function(e) {
-
-    e.preventDefault();
-
-    // animate
-    $('html, body').animate({
-       scrollTop: $(this.hash).offset().top
-     }, 600, function(){
-
-       window.location.hash = this.hash;
-     });
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
-                $('.go-top').fadeIn(300);
-                $('.navmenu').css('background', 'rgba(0, 0, 0, 0.8)');
-                $('.navmenu a').css('font-size', '1.1em');
-            } else {
-                $('.go-top').fadeOut(300);
-                $('.navmenu').css('background', 'transparent');
-                $('.navmenu a').css('font-size', '1.4em');
-            }
-        });
-        
-        // Animate the scroll to top
-        $('.go-top').click(function(event) {
-            event.preventDefault();
-            
-            $('html, body').animate({scrollTop: 0}, 600);
-        })
-    });
-</script>
 </html>
