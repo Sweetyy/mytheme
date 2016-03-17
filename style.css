@@ -686,6 +686,11 @@ a.zoom>span {
     padding: 10px;
 }
 
+.form-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
 .contact {
     margin: 0 auto;
     display: block;
@@ -695,6 +700,11 @@ a.zoom>span {
 .contact p {
 	margin-bottom: 10px;
     margin-top: 20px;
+}
+
+.description {
+    font-style: italic;
+    opacity: 0.8;
 }
 
 .contact input {
@@ -707,7 +717,7 @@ a.zoom>span {
 	padding-bottom: 5px;
 	padding-left: 2%;
 	padding-right: 2%;
-	color: rgba(0, 0, 0, 0.6);
+	color: darkgrey;
 	font-size: 16px;
     transition: all .35s ease;
 }
@@ -721,14 +731,15 @@ a.zoom>span {
 	padding-bottom: 5px;
 	padding-left: 2%;
 	padding-right: 2%;
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 18px;
+	color: darkgrey;
+	font-size: 16px;
     resize: none;
     transition: all .35s ease;
 }
 
 .contact input:focus, .contact textarea:focus {
 	outline: 0;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .contact input:-webkit-autofill, .contact textarea:-webkit-autofill, .contact select:-webkit-autofill {
@@ -737,12 +748,26 @@ a.zoom>span {
 	color: rgba(0, 0, 0, 0.8) !important; 
 }
 
-.contact input[name="first_name"]:focus {
-    background: red;
+.contact input:focus, .contact textarea:focus {
+    
+}
+
+.contact input + p, .contact textarea + p {
+    position: absolute;
+    top: -15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    margin-left: 12px;
+    transition: all 0.4s;
+}
+
+.contact input:focus + p, .contact textarea:focus + p {
+    color: #21BE7D;
+    opacity: 1;
 }
 
 .info {
-	font-size: 16px;
+	font-size: 12px;
 	font-style: italic; 
 }
 
@@ -815,25 +840,6 @@ a.zoom>span {
 	
 	.form {
 		padding: 0;
-	}
-	
-	.contact p {
-		margin-bottom: 5px;
-		margin-top: 10px;
-	}
-	
-	.contact input {
-		height: 30px;
-		font-size: 14px;
-	}
-
-	.contact textarea {
-		font-size: 14px;
-		height: 120px;
-	}
-	
-	.info {
-		font-size: 14px;
 	}
 }
 

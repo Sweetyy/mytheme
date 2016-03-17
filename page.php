@@ -38,14 +38,22 @@
 <?php endwhile; endif; ?> 
 
 <section id="Contact">
-    <h2> Contact</h2>
+    <h2>Contact</h2>
     <div class="form" id="section4">
-        <form class="contact" action="mailing.php" method="post">  
-            <p class="description">Lastname(*)</p><input type="text" name="first_name" required >
-            <p class="description">Firstname</p><input type="text" name="last_name">
-            <p class="description">Mail(*)</p><input type="email" name="email" required >
-            <p class="description">Message(*)</p><textarea rows="8" name="message" cols="30" required ></textarea>
-            <p class="description info" style="margin: 0">Fields with (*) are mandatories.</p>
+        <form class="contact" action="mailing.php" method="post">
+            <div class="form-group">
+                <input type="text" name="last_name" required ><p class="description">Last name(*)</p>
+            </div>
+            <div class="form-group">
+                <input type="text" name="first_name"><p class="description">First name</p>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" required ><p class="description">Mail(*)</p>
+            </div>
+            <div class="form-group">
+                <textarea rows="8" name="message" cols="30" required ></textarea><p class="description">Message(*)</p>
+                <p class="description info" style="margin: 0">Fields with (*) are mandatories.</p>
+            </div>
             <button class="btn-style" type="submit" name="submit" value="Submit">Send</button>
         </form>
     </div>
@@ -80,17 +88,42 @@
                 $('.navmenu a').css('font-size', '1.4em');
             }
         });
-        
-        // Animate the scroll to top
-        /*$('.go-top').click(function(event) {
-            event.preventDefault();
-            
-            $('html, body').animate({scrollTop: 0}, 600);
-        })*/
     });
 </script>
 <script>
       (function() {
+        $('.description').click(function(){
+            $(this).parent().find('input').focus();
+            $(this).parent().find('textarea').focus();
+            
+        });
+        
+        $(document)
+            .on("focus", ".contact input", function(){
+                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
+            })
+            .on("focusout", ".contact input", function(){
+                if($(this).val() == '')  {
+                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
+                }
+                else {
+                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;'});
+                }
+            })
+            .on("focus", ".contact textarea", function(){
+                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
+            })
+            .on("focusout", ".contact textarea", function(){
+                if($(this).val() == '')  {
+                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
+                }
+                else {
+                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;', 'font-style': 'normal'});
+                }
+            })
+        ;
+ 
+        
         
         var togglemenu = document.querySelectorAll(".navmenu-resp>ul>li>a");
         var toggles = document.querySelectorAll(".icon-animation");
@@ -120,22 +153,6 @@
 
       })();
     </script>
-   
-   <!-- ScrollToTop -->
-   <script>/*
-	   $(".navmenu-resp a[href^='#']").on('click', function(e) {
-
-       e.preventDefault();
-
-       // animate
-       $('html, body').animate({
-           scrollTop: $(this.hash).offset().top
-         }, 600, function(){
-   
-           window.location.hash = this.hash;
-         });
-		});*/
-	</script>
 	
 	<!-- MenuFade -->
 	<script>
