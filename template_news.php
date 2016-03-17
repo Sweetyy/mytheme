@@ -1,6 +1,6 @@
 <div class="panel-td">
     <div class="news-panel">
-        <div class="news-text">   
+        <div class="news-text">
             <h3>
                 <?php the_title(); ?>
             </h3>

@@ -22,6 +22,7 @@
     <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>   
 </head> 
 <body>
+<div class="animated yt-loader"></div>
 <div class="navmenu">
     <ul>
         <?php
