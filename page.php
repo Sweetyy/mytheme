@@ -72,6 +72,14 @@
          }, 600);
         /*window.location.hash = this.text;*/
     });
+    
+    $(".navmenu-resp ul li a[href^='#']").on('click', function(e) {
+        e.preventDefault();    
+        $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 600);
+        /*window.location.hash = this.text;*/
+    });
 </script>
 
 <script>
