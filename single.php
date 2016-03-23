@@ -45,12 +45,19 @@
         </h2>
         <?php
             if ( in_category( 'news' )) {
-                echo '<div class="news-content content-center align-justify">';
+                echo '<section class="news-content">';
+                echo '<div class="content-center align-justify">';
                 echo the_content();
-                echo '<div class="comments-template"> ';
+                echo '<p class="info align-right">';
+                echo the_date();
+                echo '</p>';
+                echo '</div>';
+                echo '</section>';
+                echo '<section class="comments-template">';
+                echo '<div class="form-style">';
                 echo comments_template();
                 echo '</div>';
-                echo '</div>';
+                echo '</section>';
             }
             else if ( in_category( 'galeries' )){
                 echo '<ul class="galery">';
@@ -62,4 +69,39 @@
     <?php endif; ?> 
 </div>
 </body>
+<script src="../wp-content/themes/mytheme/js/jquery.min.js"></script>
+<script>
+      (function() {/*
+        $('.description').click(function(){
+            $(this).parent().find('input').focus();
+            $(this).parent().find('textarea').focus();
+            
+        });
+        
+        $(document)
+            .on("focus", ".form-style input", function(){
+                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
+            })
+            .on("focusout", ".form-style input", function(){
+                if($(this).val() == '')  {
+                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
+                }
+                else {
+                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;'});
+                }
+            })
+            .on("focus", ".form-style textarea", function(){
+                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
+            })
+            .on("focusout", ".form-style textarea", function(){
+                if($(this).val() == '')  {
+                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
+                }
+                else {
+                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;', 'font-style': 'normal'});
+                }
+            })
+        ;*/
+        })();
+</script>
 </html>

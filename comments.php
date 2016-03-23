@@ -19,7 +19,7 @@ $oddcomment = 'alt';
 
 <!-- You can start editing here. -->
 
-<div class="cadre_commentaires">
+<div class="comments_block">
 <?php if ($comments) : ?>
 	<h3 id="comments"><?php comments_number('Pas de commentaire', 'Un commentaire', '% commentaires' );?> pour &#8220;<?php the_title(); ?>&#8221;</h3>
 
@@ -61,7 +61,7 @@ $oddcomment = 'alt';
 
 <?php if ('open' == $post->comment_status) : ?>
 
-		<h3 id="respond">Laissez un commentaire</h3>
+		<h3 id="respond">Let a comment</h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">connect&eacute;</a> pour laisser un commentaire.</p>
@@ -75,24 +75,33 @@ $oddcomment = 'alt';
 
 <?php else : ?>
 
-<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="40" tabindex="1" />
-<label for="author"><small>Nom <?php if ($req) echo "(requis)"; ?></small></label></p>
+<div class="form-group">
+    <p class="description">Name <?php if ($req) echo "(*)"; ?></p>
+    <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="40" tabindex="1" />
+</div>
 
-<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
-<label for="email"><small>email (ne sera pas publi&eacute;) <?php if ($req) echo "(requis)"; ?></small></label></p>
+<div class="form-group">
+    <p class="description">Email <?php if ($req) echo "(*)"; ?></p>
+    <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
+</div>
 
-<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
-<label for="url"><small>Site Web</small></label></p>
+<div class="form-group">
+    <p class="description">Website</p>
+    <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
+</div>
 
 <?php endif; ?>
 
 <!--<p><small><strong>XHTML:</strong> <?php _e('Vous pouvez utiliser ces tags&#58;'); ?> <?php echo allowed_tags(); ?></small></p>-->
 
-<p><textarea name="comment" id="comment" cols="60" rows="10" tabindex="4"></textarea></p>
+<div class="form-group">
+    <p class="description">Message(*)</p>
+    <textarea name="comment" id="comment" cols="60" rows="10" tabindex="4"></textarea>
+    <p class="description info" style="margin: 0">Fields with (*) are mandatories.</p>
+</div>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Envoyer" />
+<button name="submit" style="margin-top:0" class="btn-style" type="submit" id="submit" tabindex="5">Send</button>
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-</p>
 
 <?php do_action('comment_form', $post->ID); ?>
 

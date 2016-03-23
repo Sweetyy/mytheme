@@ -40,18 +40,22 @@
 <section id="Contact">
     <h2>Contact</h2>
     <div class="form" id="section4">
-        <form class="contact" action="mailing.php" method="post">
+        <form class="contact form-style" action="mailing.php" method="post">
             <div class="form-group">
-                <input type="text" name="last_name" required ><p class="description">Last name(*)</p>
+                <p class="description">Last name(*)</p>
+                <input type="text" name="last_name" required >
             </div>
             <div class="form-group">
-                <input type="text" name="first_name"><p class="description">First name</p>
+                <p class="description">First name</p>
+                <input type="text" name="first_name">
             </div>
             <div class="form-group">
-                <input type="email" name="email" required ><p class="description">Mail(*)</p>
+                <p class="description">Mail(*)</p>
+                <input type="email" name="email" required >
             </div>
             <div class="form-group">
-                <textarea rows="8" name="message" cols="30" required ></textarea><p class="description">Message(*)</p>
+                <p class="description">Message(*)</p>
+                <textarea rows="8" name="message" cols="30" required ></textarea>
                 <p class="description info" style="margin: 0">Fields with (*) are mandatories.</p>
             </div>
             <button class="btn-style" type="submit" name="submit" value="Submit">Send</button>
@@ -100,6 +104,7 @@
 </script>
 <script>
       (function() {
+          /*
         $('.description').click(function(){
             $(this).parent().find('input').focus();
             $(this).parent().find('textarea').focus();
@@ -107,10 +112,10 @@
         });
         
         $(document)
-            .on("focus", ".contact input", function(){
+            .on("focus", ".form-style input", function(){
                 $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
             })
-            .on("focusout", ".contact input", function(){
+            .on("focusout", ".form-style input", function(){
                 if($(this).val() == '')  {
                     $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
                 }
@@ -118,10 +123,10 @@
                     $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;'});
                 }
             })
-            .on("focus", ".contact textarea", function(){
+            .on("focus", ".form-style textarea", function(){
                 $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
             })
-            .on("focusout", ".contact textarea", function(){
+            .on("focusout", ".form-style textarea", function(){
                 if($(this).val() == '')  {
                     $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
                 }
@@ -129,7 +134,7 @@
                     $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;', 'font-style': 'normal'});
                 }
             })
-        ;
+        ;*/
  
         
         

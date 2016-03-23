@@ -182,6 +182,15 @@ h2 {
 
 h3 {
     font-weight: normal;
+    color: #B8B7B7;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-weight: normal;
+    color: #0B975D;
+    font-size: 1.2em;
 }
 
 img {
@@ -548,6 +557,18 @@ h1 {
     margin: 0;
 }
 
+.news-content {
+    margin-top: 0 !important;
+}
+
+.news-content p {
+    font-size: 1.2em;
+}
+
+.comments-template {
+    padding-top: 5vh;
+}
+
 /*------------------
 	GALLERY PAGE
 ------------------*/
@@ -677,8 +698,13 @@ a.zoom>span {
     transition: all .6s ease;
 }
 
+.single-post h2 {
+    padding-top: 5vh;
+}
+
+
 /*------------------
-	CONTACT PAGE
+	FORM-STYLE PAGE
 ------------------*/
 
 .content>section:last-child {
@@ -694,15 +720,15 @@ a.zoom>span {
     margin-bottom: 35px;
 }
 
-.contact {
+.form-style {
     margin: 0 auto;
     display: block;
     max-width: 660px;
 }
 
-.contact p {
-	margin-bottom: 10px;
-    margin-top: 20px;
+.form-style p.description {
+	margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .description {
@@ -710,7 +736,7 @@ a.zoom>span {
     opacity: 0.8;
 }
 
-.contact input {
+.form-style input {
 	font-family: 'Raleway', Arial, sans-serif;
 	border: 0;
 	width: 100%;
@@ -725,7 +751,7 @@ a.zoom>span {
     transition: all .35s ease;
 }
 
-.contact textarea {
+.form-style textarea {
 	font-family: 'Raleway', Arial, sans-serif;
 	border: 0;
 	width: 100%;
@@ -740,22 +766,28 @@ a.zoom>span {
     transition: all .35s ease;
 }
 
-.contact input:focus, .contact textarea:focus {
+.form-style input:focus, .form-style textarea:focus {
 	outline: 0;
     color: rgba(0, 0, 0, 0.6);
 }
 
-.contact input:-webkit-autofill, .contact textarea:-webkit-autofill, .contact select:-webkit-autofill {
+.form-style input:-webkit-autofill, .form-style textarea:-webkit-autofill, .form-style select:-webkit-autofill {
     background: silver !important;
 	outline: 0;
 	color: rgba(0, 0, 0, 0.8) !important; 
 }
 
-.contact input:focus, .contact textarea:focus {
+.form-style input:focus, .form-style textarea:focus {
     
 }
 
-.contact input + p, .contact textarea + p {
+.form-style p.description {
+    color: #2A2A2A;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+/*.form-style input + p, .form-style textarea + p {
     position: absolute;
     top: -15px;
     color: rgba(0, 0, 0, 0.5);
@@ -764,14 +796,29 @@ a.zoom>span {
     transition: all 0.4s;
 }
 
-.contact input:focus + p, .contact textarea:focus + p {
+.form-style input:focus + p, .form-style textarea:focus + p {
     color: #21BE7D;
     opacity: 1;
-}
+}*/
 
 .info {
-	font-size: 12px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+	font-style: italic;
+}
+
+.form-style p.description.info {
+	font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
 	font-style: italic; 
+}
+
+.form-style .form-group {
+    margin-bottom: 20px;
+}
+
+.comments_block {
+    margin-bottom: 40px;
 }
 
 .btn-style {
