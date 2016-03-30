@@ -91,13 +91,9 @@
         // Show or hide the sticky footer button
         $(window).scroll(function() {
             if ($(this).scrollTop() > 300) {
-                $('.go-top').fadeIn(300);
-                $('.navmenu').css('background', 'rgba(0, 0, 0, 0.8)');
-                $('.navmenu a').css('font-size', '1.1em');
+                $('.navmenu').addClass('scrollafter');
             } else {
-                $('.go-top').fadeOut(300);
-                $('.navmenu').css('background', 'transparent');
-                $('.navmenu a').css('font-size', '1.4em');
+                $('.navmenu').removeClass('scrollafter');
             }
         });
     });

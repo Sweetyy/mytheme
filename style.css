@@ -238,40 +238,69 @@ section {
     margin: 0 auto;
 }
 
-.facebook {
-    display: none;
+/*** RIBBON ***/
+
+.ribbon {
+    position: fixed;
+    z-index: 8000;
+    display: inline-block;
+    line-height: 2.2em;
+    padding: 0 500px;
+    margin: 0 -500px;
+    font-size: 15px;
+    font-family: "Georgia",serif;
+    font-style: italic;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.ribbon:before {
+    content: "";
     position: absolute;
-    bottom: 0;
-    left: 10px;
-    font-size: 46px;
-    z-index: 10000;
+    top: .2em;
+    left: 0;
+    right: 0;
+    bottom: .2em;
+    display: block;
+    border: 1px dashed rgba(0,0,0,0.45);
 }
 
-.facebook a {
-    -webkit-transition: color .35s ease;
-    transition: color .35s ease;
+.ribbon-red {
+    color: #300;
+    text-shadow: .05em .05em 0 #b44;
+    background-color: red;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #892329), color-stop(100%, #7d151f));
+    background-image: -webkit-linear-gradient(top, #892329 0, #7d151f 100%);
+    background-image: -o-linear-gradient(top, #892329 0, #7d151f 100%);
+    background-image: linear-gradient(to bottom, #892329 0, #7d151f 100%);
 }
 
-.facebook:hover a{
-    color: #3B5998 !important;
+.ribbon-top-left, .ribbon-bottom-right {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 
-.go-top {
-	position: fixed;
-	bottom: 1em;
-	right: 1em;
-	text-decoration: none;
-	color: white;
-    color: rgba(255, 255, 255, 0.6);
-	font-size: 50px;
-	display: none;
-    z-index: 1000;
-    -webkit-transition: color .35s ease;
-    transition: color .35s ease;
+.ribbon-top-left, .ribbon-top-right {
+    top: 1em;
 }
 
-.go-top:hover {
-	color: rgba(255, 255, 255, 1);
+.ribbon-bottom-left, .ribbon-bottom-right {
+    bottom: 1em;
+}
+
+.ribbon-top-right, .ribbon-bottom-right {
+    right: 1em;
+}
+
+.ribbon-top-left, .ribbon-bottom-left {
+    left: 1em;
 }
 
 .navmenu {
@@ -282,6 +311,8 @@ section {
     width: 100%;
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
+    color: #29364A;
+    background: transparent;
     
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 4s; /* Firefox < 16 */
@@ -309,13 +340,26 @@ section {
 .navmenu a{
     text-decoration: none;
     position: relative;
-    color: white;
     text-align: center;
     display: inline-block;
     margin: 0 auto;
+    color: #29364A;
     font-size: 1.4em;
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
+}
+
+.navmenu.desktop a {
+    color: white;
+}
+
+.navmenu.scrollafter {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.navmenu.scrollafter a{
+    font-size: 1.1em;
+    color: white;
 }
 
 .navmenu a:hover {
@@ -365,19 +409,19 @@ legend {
 	padding: 6px;
 }
 
-.align-center p{
+.align-center p, .align-center{
     text-align: center;
 }
 
-.align-left p{
+.align-left p, .align-left{
     text-align: left;
 }
 
-.align-right p{
+.align-right p, .align-right{
     text-align: right;
 }
 
-.align-justify p{  
+.align-justify p, .align-justify{  
     text-align: justify;
 }
 
@@ -803,8 +847,8 @@ a.zoom>span {
 
 .info {
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.8);
-	font-style: italic;
+    color: rgba(87, 151, 93, 0.86);
+    font-style: italic;
 }
 
 .form-style p.description.info {

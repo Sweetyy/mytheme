@@ -23,7 +23,7 @@
 </head> 
 <body>
 <div class="animated yt-loader"></div>
-<div class="navmenu">
+<div class="navmenu single">
     <ul>
         <?php
             if ( in_category( 'news' )) {
@@ -47,10 +47,10 @@
             if ( in_category( 'news' )) {
                 echo '<section class="news-content">';
                 echo '<div class="content-center align-justify">';
-                echo the_content();
-                echo '<p class="info align-right">';
+                echo '<p class="info">';
                 echo the_date();
                 echo '</p>';
+                echo the_content();
                 echo '</div>';
                 echo '</section>';
                 echo '<section class="comments-template">';
@@ -71,37 +71,15 @@
 </body>
 <script src="../wp-content/themes/mytheme/js/jquery.min.js"></script>
 <script>
-      (function() {/*
-        $('.description').click(function(){
-            $(this).parent().find('input').focus();
-            $(this).parent().find('textarea').focus();
-            
+    $(document).ready(function() {
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.navmenu').addClass('scrollafter');
+            } else {
+                $('.navmenu').removeClass('scrollafter');
+            }
         });
-        
-        $(document)
-            .on("focus", ".form-style input", function(){
-                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
-            })
-            .on("focusout", ".form-style input", function(){
-                if($(this).val() == '')  {
-                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
-                }
-                else {
-                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;'});
-                }
-            })
-            .on("focus", ".form-style textarea", function(){
-                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
-            })
-            .on("focusout", ".form-style textarea", function(){
-                if($(this).val() == '')  {
-                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
-                }
-                else {
-                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;', 'font-style': 'normal'});
-                }
-            })
-        ;*/
-        })();
+    });
 </script>
 </html>

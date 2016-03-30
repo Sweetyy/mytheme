@@ -23,6 +23,7 @@
     </head> 
     <body>
         <div class="animated yt-loader"></div>
+        <span class="ribbon ribbon-bottom-right ribbon-red">Alpha</span>
         <div id="Gotop" class="main">
         <span class="responsive">
             <button id="start" class="icon-animation icon-animation-transition">
