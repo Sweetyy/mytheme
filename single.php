@@ -36,7 +36,6 @@
     </ul>
 </div>
         
-<a href="#" class="go-top"><i class="fa fa-chevron-circle-up"></i></a>
 <div class="content single-post">
     <?php if (have_posts()) : ?> 
         <?php while (have_posts()) : the_post(); ?>
