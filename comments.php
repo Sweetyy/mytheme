@@ -21,7 +21,7 @@ $oddcomment = 'alt';
 
 <div class="comments_block">
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php comments_number('Pas de commentaire', 'Un commentaire', '% commentaires' );?> pour &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments"><?php comments_number('Pas de commentaire', '1 commentaire', '% commentaires' );?> pour &#8220;<?php the_title(); ?>&#8221;</h3>
 
 <ol class="commentlist">
 <?php foreach ($comments as $comment) : ?>
@@ -53,7 +53,7 @@ $oddcomment = 'alt';
 	<?php else : // comments are closed ?>
 
 	<!-- If comments are closed. -->
-<p class="nocomments">Les commentaires sont fermŽs !</p>
+<p class="nocomments">Les commentaires sont ferm&eacute;s !</p>
 
 	<?php endif; ?>
 <?php endif; ?>
