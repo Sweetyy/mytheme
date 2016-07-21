@@ -1,3 +1,12 @@
+/*
+Theme Name: Mytheme
+Theme URI: http://agallippi.com/webfolio/
+Description: This One page's theme for Wordpress is responsive for all devices (Tablet, Mobile, ...). This theme is a portfolio and you can edit on your own, of course, the title and each content of "News", "About" & "Galleries". Thank you for using my theme and Enjoy it !
+Version: 1.0
+Author: Anthony G.
+Author URI: http://agallippi.com/webfolio/
+*/
+
 /* latin */
 @font-face {
   font-family: 'Raleway';
@@ -557,7 +566,6 @@ legend {
 }
 
 .panel-td {
-    margin: 0 auto;
     width:30%;
     padding: 6px;
     text-align: center;
@@ -639,14 +647,43 @@ h1 {
 .social-link ul {
     max-width:352px;
     margin: 0 auto;
+    width: 100%;
+    text-align: center;
 }
 
 .social-link ul li {
-    width: 164px;
-    margin: 5px;
-    display: inline-block;
      -webkit-transition: all .6s ease;
     transition: all .6s ease;
+    
+    font-size: 40px;
+    width:20%;
+    padding: 6px;
+    text-align: center;
+    clear: left;
+    display: inline-block;
+    margin:0 auto; 
+}
+
+.social-link ul li a {
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    color: white;
+}
+
+a[rel~="facebook"]:hover {
+    color: #1d4aab;
+}
+
+a[rel~="instagram"]:hover {
+    color: #e36d21;
+}
+
+a[rel~="linkedin"]:hover {
+    color: #0295e0;
+}
+
+a[rel~="twitter"]:hover {
+    color: #1face7;
 }
 
 #sentences {
@@ -1365,13 +1402,6 @@ a.zoom>span {
 @media (max-width: 380px) {
     h1 {
         padding-top: 30vh;
-    }
-    
-    .social-link ul li {
-        width: 164px;
-        margin: 5px;
-        display: block;
-        margin: 0 auto;
     }
 }
 

@@ -30,16 +30,14 @@
                  <span></span>
             </button>
             <div class="navmenu-resp">
-                <?php wp_nav_menu(); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) ); ?>
             </div>
         </span>
         
         <div class="navmenu desktop">
-            <?php wp_nav_menu(); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) ); ?>
         </div>
-        
-        <!--<a href="#" class="go-top desktop" rel="m_PageScroll2id"><i class="fa fa-chevron-circle-up"></i></a>-->
-        
+                
         <div class="content">
             <span>
                 <div class="bg-animate"></div>
@@ -48,10 +46,11 @@
                     <h1><?php bloginfo('name'); ?></a></h1>
                     <span id="sentences"><?php bloginfo('description'); ?></span>
                     <div class="social-link">
-                        <ul>
+                        <?php wp_nav_menu( array( 'theme_location' => 'menu_social' ) ); ?>
+                        <!--ul>
                             <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/facebook.png"></a></li>
                             <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/instagram.png"></a></li>
-                        </ul>
+                        </ul-->
                     </div>
                 </section>
             </span>

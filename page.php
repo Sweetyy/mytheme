@@ -2,38 +2,38 @@
     wp_reset_query();
     get_header();
 
-    query_posts('post_type=page'); ?>
+    query_posts('post_type=page');
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <?php
-        if( 'Galleries' === $post->post_title) {
-            echo '<section id="'.get_the_title().'" class="">';
-        }
-        else if( 'News' === $post->post_title) {
-            echo '<section id="'.get_the_title().'" class="content-center">';
-        }
-        else {
-            echo '<section id="'. get_the_title().'" class="content-center align-justify">';
-        }
-    ?>
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
     
-    <h2><?php the_title(); ?></h2>
+    if( 'Galleries' === $post->post_title) {
+        echo '<section id="'.get_the_title().'" class="">';
+    }
+    else if( 'News' === $post->post_title) {
+        echo '<section id="'.get_the_title().'" class="content-center">';
+    }
+    else {
+        echo '<section id="'. get_the_title().'" class="content-center align-justify">';
+    }
+?>
+    
+<h2><?php the_title(); ?></h2>
 
-    <?php the_content(); ?>
-    
-    <?php if( 'Galleries' === $post->post_title ) {
+<?php the_content();
+
+    if( 'Galleries' === $post->post_title ) {
         echo '<div class="galery panel-table">';
         echo do_shortcode("[ic_add_posts category='galeries' template='template_gallery.php']");
         echo '</div>';
-    } ?>
-    
-    <?php if( 'News' === $post->post_title ) {
+    }
+
+    if( 'News' === $post->post_title ) {
         echo '<div class="news panel-table">';
         echo do_shortcode("[ic_add_posts category='news' template='template_news.php']");
         echo '</div>';
-    } ?>
-    
-    </section>
+} ?>
+
+</section>
 
 <?php endwhile; endif; ?> 
 
@@ -189,7 +189,6 @@
 				$('#nav').prop('checked', false);
 				
 			});
-			
 		});
 	</script>
 

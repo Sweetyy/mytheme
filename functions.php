@@ -1,11 +1,4 @@
 <?php
-register_nav_menus(
-        array(
-                'premier-menu' => __( 'premier menu' ),
-                'second-menu' => __( 'Second menu' ),
-                'troisieme-menu' => __( 'Troisième Menu' )
-        )
-);
 function image_tag_class($class, $id, $align, $size) {
 	return $align;
 }
@@ -22,6 +15,15 @@ function custom_excerpt_length( $length ) {
 	return 10;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-?>
 
+function register_my_menus() {
+  register_nav_menus(
+    array(
+        'main_nav' => __( 'Main Menu' ),
+        'menu_social' => __( 'Social Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+?>
 
