@@ -52,11 +52,7 @@
                 echo the_content();
                 echo '</div>';
                 echo '</section>';
-                echo '<section class="comments-template">';
-                echo '<div class="form-style">';
                 echo comments_template();
-                echo '</div>';
-                echo '</section>';
             }
             else if ( in_category( 'galeries' )){
                 echo '<ul class="galery">';

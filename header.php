@@ -42,15 +42,10 @@
             <span>
                 <div class="bg-animate"></div>
                 <section id="Accueil">
-                    <!-- <div class="logo"><img src="img/logo.png"></div> -->
                     <h1><?php bloginfo('name'); ?></a></h1>
                     <span id="sentences"><?php bloginfo('description'); ?></span>
                     <div class="social-link">
                         <?php wp_nav_menu( array( 'theme_location' => 'menu_social' ) ); ?>
-                        <!--ul>
-                            <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/facebook.png"></a></li>
-                            <li><a href="#" target="_blank"><img src="http://localhost/wordpress/wp-content/themes/mytheme/img/instagram.png"></a></li>
-                        </ul-->
                     </div>
                 </section>
             </span>

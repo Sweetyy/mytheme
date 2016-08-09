@@ -1,3 +1,5 @@
+<section class="comments-template">
+<div class="form-style">
 <?php // Do not delete these lines
 if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Ne pas t&eacute;l&eacute;charger cette page directement, merci !');
 if (!empty($post->post_password)) { // if there's a password
@@ -21,7 +23,7 @@ $oddcomment = 'alt';
 
 <div class="comments_block">
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php comments_number('Pas de commentaire', '1 commentaire', '% commentaires' );?> pour &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments"><?php comments_number('No comment', '1 comment', '% comments' );?> for &#8220;<?php the_title(); ?>&#8221;</h3>
 
 <ol class="commentlist">
 <?php foreach ($comments as $comment) : ?>
@@ -29,9 +31,9 @@ $oddcomment = 'alt';
 	<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
 
 <div class="commentmetadata">
-<strong><?php comment_author_link() ?></strong>, <?php _e('le'); ?> <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('j F, Y') ?> <?php _e('&agrave;');?> <?php comment_time() ?></a> <?php _e('Said&#58;'); ?> <?php edit_comment_link('Edit Comment','',''); ?>
+<b><?php comment_author_link() ?></b>, <i><!--href="#comment-<?php comment_ID() ?>" --><?php comment_date('j F Y') ?> <?php _e('at');?> <?php comment_time() ?></i> <?php _e('said &#58;'); ?> <?php edit_comment_link('Edit Comment','',''); ?>
  		<?php if ($comment->comment_approved == '0') : ?>
-		<em><?php _e('Votre commentaire est en cours de mod&eacute;ration'); ?></em>
+		<em><?php _e('Your comment is pending moderation.'); ?></em>
  		<?php endif; ?>
 </div>
 
@@ -53,7 +55,7 @@ $oddcomment = 'alt';
 	<?php else : // comments are closed ?>
 
 	<!-- If comments are closed. -->
-<p class="nocomments">Les commentaires sont ferm&eacute;s !</p>
+<p class="nocomments">Comments are closed !</p>
 
 	<?php endif; ?>
 <?php endif; ?>
@@ -64,14 +66,14 @@ $oddcomment = 'alt';
 		<h3 id="respond">Let a comment</h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">connect&eacute;</a> pour laisser un commentaire.</p>
+<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">connected</a> to write a comment.</p>
 
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 <?php if ( $user_ID ) : ?>
 
-<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="D&eacute;connect&eacute; de ce compte">D&eacute;connection &raquo;</a></p>
+<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Disconnect from this account">Disconnect &raquo;</a></p>
 
 <?php else : ?>
 
@@ -92,7 +94,7 @@ $oddcomment = 'alt';
 
 <?php endif; ?>
 
-<!--<p><small><strong>XHTML:</strong> <?php _e('Vous pouvez utiliser ces tags&#58;'); ?> <?php echo allowed_tags(); ?></small></p>-->
+<!--<p><small><strong>XHTML:</strong> <?php _e('You can use these tags &#58;'); ?> <?php echo allowed_tags(); ?></small></p>-->
 
 <div class="form-group">
     <p class="description">Message(*)</p>
@@ -110,3 +112,5 @@ $oddcomment = 'alt';
 <?php endif; // If registration required and not logged in ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
+</div>
+</div>
