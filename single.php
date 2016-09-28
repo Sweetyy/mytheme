@@ -75,6 +75,10 @@
                 $('.navmenu').removeClass('scrollafter');
             }
         });
+        
+        /*$('.single-post .galery img').each(function(i) {
+            $(this).delay(i*400).fadeIn(1200)
+        });*/
     });
 </script>
 </html>

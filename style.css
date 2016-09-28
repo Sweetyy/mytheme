@@ -888,13 +888,15 @@ a.zoom>span {
     margin: 0.5%;
     float: left;
     overflow: hidden;
+    
+    /* Animation without using Jquery */
     -webkit-transition: opacity .35s ease;
     transition: opacity .35s ease;
 	display: inline-block;
     opacity: 1;
     
-    -webkit-animation-name: fadein; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: fadein;
+    -webkit-animation-duration: 2s;
     animation-name: fadein;
     animation-duration: 2s;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html style="margin-top: 0 !important"> 
+<html> 
     <head>
         <title>
             <?php bloginfo('name') ?><?php if ( is_404() ) : ?> &raquo; 
@@ -20,10 +20,11 @@
         <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" /> 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>   
         <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>   
-    </head> 
+    </head>
+    
     <body>
         <div class="animated yt-loader"></div>
-        <span class="ribbon ribbon-bottom-right ribbon-green">Alpha</span>
+        <span class="ribbon ribbon-bottom-right ribbon-green">#Enj0y</span>
         <div id="Gotop" class="main">
         <span class="responsive">
             <button id="start" class="icon-animation icon-animation-transition">

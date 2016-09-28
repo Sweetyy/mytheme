@@ -100,40 +100,7 @@
 </script>
 <script>
       (function() {
-          /*
-        $('.description').click(function(){
-            $(this).parent().find('input').focus();
-            $(this).parent().find('textarea').focus();
-            
-        });
-        
-        $(document)
-            .on("focus", ".form-style input", function(){
-                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
-            })
-            .on("focusout", ".form-style input", function(){
-                if($(this).val() == '')  {
-                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
-                }
-                else {
-                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;'});
-                }
-            })
-            .on("focus", ".form-style textarea", function(){
-                $(this).parent().find('.description').css({'top': '-44px', 'font-style': 'normal', 'opacity': '1'});
-            })
-            .on("focusout", ".form-style textarea", function(){
-                if($(this).val() == '')  {
-                    $(this).parent().find('.description').css({'top': '-15px', 'font-style': 'italic', 'opacity': '0.8'});
-                }
-                else {
-                    $(this).parent().find('.description').css({'top': '-44px;', 'color': '#0B975D;', 'font-style': 'normal'});
-                }
-            })
-        ;*/
- 
-        
-        
+          
         var togglemenu = document.querySelectorAll(".navmenu-resp>ul>li>a");
         var toggles = document.querySelectorAll(".icon-animation");
 
@@ -158,7 +125,6 @@
                 $("#start").addClass( "activate" );
             }
         });
-
 
       })();
     </script>
