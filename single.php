@@ -63,6 +63,17 @@
         <?php endwhile; ?> 
     <?php endif; ?> 
 </div>
+
+<footer>
+    <div class="footer-comp">
+        <p style="margin-top: 30px"><b style="color: #333"><?php bloginfo('name'); ?></b><br/>Dream with your eyes open.</p>
+        <p style="margin-top: 20px">Contact me: <a href="#" style="color: #222222">js.dreamphoto@gmail.com</a></p>
+        <div class="social-section">
+            <?php wp_nav_menu( array( 'theme_location' => 'menu_social' ) ); ?>
+        </div>
+    </div>
+</footer>
+
 </body>
 <script src="../wp-content/themes/mytheme/js/jquery.min.js"></script>
 <script>
