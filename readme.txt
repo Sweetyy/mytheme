@@ -1,6 +1,8 @@
 This is a note for 'mytheme' for Wordpress.
+Update 06/01/2017
 
 To use this theme make sure to install the plugin "Posts in page" https://github.com/ivycat/Posts-in-Page.
+Go to "mytheme" folder -> cut "posts-in-page" folder -> go to "plugin" in "wp-content" and paste it in it.
 
 In the dashboard to set the menus please make sure to do the following instructions :
  - For the social menu : Go to 'Appearance' -> 'Menus' -> Create a new menu called 'menu_social' -> Add Custom link that will refer to

@@ -19,10 +19,10 @@
         <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" /> 
         <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" /> 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>   
-        <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>   
+        <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>
     </head>
     
-    <body>
+    <body class="custom-background">
         <div class="animated yt-loader"></div>
         <span class="ribbon ribbon-bottom-right ribbon-green">#Enj0y</span>
         <div id="Gotop" class="main">
@@ -41,7 +41,7 @@
                 
         <div class="content">
             <span>
-                <div class="bg-animate"></div>
+                <div class="bg-animate bg-custom"></div>
                 <section id="Accueil">
                     <h1><?php bloginfo('name'); ?></a></h1>
                     <span id="sentences"><?php bloginfo('description'); ?></span>

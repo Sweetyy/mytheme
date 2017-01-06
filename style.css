@@ -580,7 +580,9 @@ legend {
 
 .bg-animate {
     position: relative;
-    background: #1B1B1B url(img/bg-no.png);
+    /*background: #1B1B1B url(img/bg-no.png);*/
+    /*background-color: #1B1B1B;*/
+    background: url(img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
@@ -599,6 +601,17 @@ legend {
     backface-visibility: hidden;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.bg-animate:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
 }
 
 .content>span>section {
@@ -963,6 +976,7 @@ a.zoom>span {
 	font-size: 16px;
     box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
     transition: all .35s ease;
+    background: whitesmoke;
 }
 
 .form-style textarea {
@@ -979,6 +993,7 @@ a.zoom>span {
     box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
     resize: none;
     transition: all .35s ease;
+    background: whitesmoke;
 }
 
 .form-style input:focus, .form-style textarea:focus {
