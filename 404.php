@@ -20,42 +20,18 @@
         <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" /> 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>   
         <?php wp_get_archives('type=monthly&format=link'); ?> <?php //comments_popup_script(); <?php wp_head(); ?>
-        
-        <script src="wp-content/themes/mytheme/js/jquery.min.js"></script>
-        <script src="wp-content/themes/mytheme/js/main.js"></script>
     </head>
     
     <body class="custom-background">
-        <div class="animated yt-loader"></div>
-        <span class="ribbon ribbon-bottom-right ribbon-green">#Enj0y</span>
-        <div id="Gotop" class="main">
-        <span class="responsive">
-            <button id="start" class="icon-animation icon-animation-transition">
-                 <span></span>
-            </button>
-            <div class="navmenu-resp">
-                <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) ); ?>
-            </div>
-        </span>
         
-        <div class="navmenu desktop">
-            <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) ); ?>
-        </div>
-                
-        <div class="content">
-            <span>
-                <div class="bg-animate bg-custom"></div>
-                <section id="Accueil">
-                    <h1><?php bloginfo('name'); ?></a></h1>
-                    <span id="sentences"><?php bloginfo('description'); ?></span>
-                    <div class="social-link">
-                        <?php wp_nav_menu( array( 'theme_location' => 'menu_social' ) ); ?>
-                    </div>
-                </section>
-            </span>
-            
-            
-            
+        <section>
+            404 Try again !
+            <br/><br/>
+            I am really sorry but it looks like you made a mistake or the page you are searching for doesn't exist anymore.
+        </section>
+    </body>
 
-        
-        
+</div>
+  
+</body>
+</html>
